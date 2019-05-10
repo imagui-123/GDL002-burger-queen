@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/imagui-123/GDL002-burger-queen/static/css/main.d2696516.chunk.css",
-    "main.js": "/imagui-123/GDL002-burger-queen/static/js/main.be88b9b9.chunk.js",
-    "main.js.map": "/imagui-123/GDL002-burger-queen/static/js/main.be88b9b9.chunk.js.map",
-    "runtime~main.js": "/imagui-123/GDL002-burger-queen/static/js/runtime~main.458f1422.js",
-    "runtime~main.js.map": "/imagui-123/GDL002-burger-queen/static/js/runtime~main.458f1422.js.map",
-    "static/js/2.e09f9078.chunk.js": "/imagui-123/GDL002-burger-queen/static/js/2.e09f9078.chunk.js",
-    "static/js/2.e09f9078.chunk.js.map": "/imagui-123/GDL002-burger-queen/static/js/2.e09f9078.chunk.js.map",
-    "index.html": "/imagui-123/GDL002-burger-queen/index.html",
-    "precache-manifest.6cf57a4e88c0a8307f20ca4ab5b09228.js": "/imagui-123/GDL002-burger-queen/precache-manifest.6cf57a4e88c0a8307f20ca4ab5b09228.js",
-    "service-worker.js": "/imagui-123/GDL002-burger-queen/service-worker.js",
-    "static/css/main.d2696516.chunk.css.map": "/imagui-123/GDL002-burger-queen/static/css/main.d2696516.chunk.css.map"
+    "main.css": "/GDL002-burger-queen/static/css/main.d2696516.chunk.css",
+    "main.js": "/GDL002-burger-queen/static/js/main.889443cd.chunk.js",
+    "main.js.map": "/GDL002-burger-queen/static/js/main.889443cd.chunk.js.map",
+    "runtime~main.js": "/GDL002-burger-queen/static/js/runtime~main.2601196f.js",
+    "runtime~main.js.map": "/GDL002-burger-queen/static/js/runtime~main.2601196f.js.map",
+    "static/js/2.e09f9078.chunk.js": "/GDL002-burger-queen/static/js/2.e09f9078.chunk.js",
+    "static/js/2.e09f9078.chunk.js.map": "/GDL002-burger-queen/static/js/2.e09f9078.chunk.js.map",
+    "index.html": "/GDL002-burger-queen/index.html",
+    "precache-manifest.c6945e70648d89605a6c0a23817b6d2b.js": "/GDL002-burger-queen/precache-manifest.c6945e70648d89605a6c0a23817b6d2b.js",
+    "service-worker.js": "/GDL002-burger-queen/service-worker.js",
+    "static/css/main.d2696516.chunk.css.map": "/GDL002-burger-queen/static/css/main.d2696516.chunk.css.map"
   }
 }
