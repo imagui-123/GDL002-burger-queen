@@ -4,13 +4,13 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 5em;
   pointer-events: none;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10 em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,11 +23,27 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  text-align: center;
+  color: white;
 }
+
+#app-container{
+  margin-top: 50px;
+  width: 100%;
+  max-width: 900px;
+  position: aboslute;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px black;
+}
+
+#app-container-inside{
+  width: 200%;
+  display: flex;
+  position: relative;
+  background-color: white;
+  left: 0%;
+  transition: all 500ms ease-in-out;
+}
+
+

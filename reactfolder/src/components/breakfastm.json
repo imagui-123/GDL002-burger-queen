@@ -1,0 +1,25 @@
+
+[
+  {
+    "name": "Café Americano",
+    "price":"$ 20",
+    "image":"https://i2.wp.com/www.cookingmarket.com.mx/wp-content/uploads/2017/04/Cooking-Market-Caf%C3%A9-Americano-con-Espuma.png?resize=418%2C326"
+  },
+  {
+   "name":"Café con Leche",
+   "price":"$ 10",
+   "image":"http://bk-latam-prod.s3.amazonaws.com/sites/burgerking.com.ar/files/500x540-13.png"
+  },
+  {
+
+   "name":"Sandwich jamón con queso",
+   "price":"$ 10",
+   "image": "http://162.144.95.215/~dqpanama/wp-content/uploads/2016/06/igs-hamswiss.png" 
+  },
+  {
+
+   "name":"Jugo Natural",
+   "price":"$ 10",
+   "image":"https://d701vexhkz032.cloudfront.net/media/images/menu-content/AR/bebidas/56e0840c82dcc7.34552799_jugo-de-naranja.png"
+    }
+]

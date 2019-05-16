@@ -1,32 +1,42 @@
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import React from 'react';
+import './App.css';
+import {BrowserRouter,Route, Switch} from "react-router-dom";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+// import Breakfast from './components/menuBreakfast';
+//import CartButton from './components/productCard';
+//import Menu from './components/menuBreakfast';
+import Error from './components/error';
+import Home from './components/home';
+import Navigation from './components/navbar';
+import Kitchen from './components/kitchen';
+import Breakfastt from './components/waiter';
+import Lunch from './components/lunchMenu';
+import OrderMenu from './components/orderMenu';
 
-// const app=()=>{
-//   return(
-//     <counter />
-//    // < navBar />
-//   );
-// };
-// export default App;
+
+
+
+
+class App extends React.Component{
+
+    render(){
+        return(
+            <BrowserRouter>
+            <div>
+                <Navigation />      
+            <Switch>
+                <Route path="/" component ={Home} exact />
+                
+                <Route path="/waiter" component ={Breakfastt} exact />
+                <Route path="/lunchMenu/" component ={Lunch} exact />
+                <Route path="/kitchen" component ={Kitchen} exact />
+                <Route  component ={Error} />
+            </Switch>
+            </div>
+            
+            </BrowserRouter>
+        );
+    }
+};
+
+ export default App;

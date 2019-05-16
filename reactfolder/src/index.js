@@ -1,31 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './App';
-//import * as serviceWorker from './serviceWorker';
-import SideBar from "./components/sideBar";
-import {createStore} from 'redux'
-import reducer from './reducer';
-import { Provider } from 'react-redux';
 
-const store = createStore(
-    reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import './index.css'; //WEB PACK AFFECTAN A TODA LA APLICACION
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+//import SideBar from "./components/sideBar";
+//ARCHIVO PRINCIPAL DE REACT COMO EL MAIN
 
-const App=()=>{
-  return(
-    <SideBar />
-    //<reducer />
-  );
-};
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);
+ReactDOM.render(<App />, rootElement);
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // // If you want your app to work offline and load faster, you can change
 // // unregister() to register() below. Note this comes with some pitfalls.
 // // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+serviceWorker.unregister();
