@@ -23,12 +23,14 @@ class OrderMenu extends React.Component{
             orders
         });
     }
+
     removeItem=(event,index)=>{
         event.preventDefault();
         this.state.orders.splice(index,1);
         this.setState({div:this.state.orders});
     }
     render(){
+       
         return(
            
             <div >

@@ -9,9 +9,7 @@ import Error from './components/error';
 import Home from './components/home';
 import Navigation from './components/navbar';
 import Kitchen from './components/kitchen';
-import Breakfastt from './components/waiter';
-import Lunch from './components/lunchMenu';
-import OrderMenu from './components/orderMenu';
+import FormMenu from './components/helpers';
 
 
 
@@ -26,10 +24,8 @@ class App extends React.Component{
                 <Navigation />      
             <Switch>
                 <Route path="/" component ={Home} exact />
-                
-                <Route path="/waiter" component ={Breakfastt} exact />
-                <Route path="/lunchMenu/" component ={Lunch} exact />
-                <Route path="/kitchen" component ={Kitchen} exact />
+                <Route path="/menu" component ={FormMenu}  />
+                <Route path="/kitchen" component ={Kitchen} />
                 <Route  component ={Error} />
             </Switch>
             </div>

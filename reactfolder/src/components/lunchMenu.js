@@ -4,7 +4,7 @@ import LunchMenu from '../components/lunchm.json'
 class LunchM extends React.Component {
   render(){
     return(
-      <div className="col-md-4">
+      <div className="col-md-6">
         {LunchMenu.map((menuDetail, index)=>
           <div className="card mt-4" key={index}> 
             <img src={menuDetail.image} className="card-img-top" alt="..."></img>

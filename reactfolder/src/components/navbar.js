@@ -7,8 +7,7 @@ const Navigation = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
         <NavLink to="/" className="nav-link active">Home </NavLink>
-        <NavLink to="/waiter" className="nav-link">Breakfast</NavLink>
-        <NavLink to="/lunchMenu" className="nav-link">Lunch</NavLink>
+        <NavLink to="/menu" className="nav-link">Menú</NavLink>
         <NavLink to="/kitchen" className="nav-link">Kitchen</NavLink>
         </ul>
       </div>

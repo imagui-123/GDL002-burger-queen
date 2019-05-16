@@ -24,9 +24,8 @@ class BreakfastM extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-sm-2">
-        <div className="card">
+      
+        <div className="col-md-6">
          {BreakfastMenu.map((menuDetail, index)=>
            <div className="card" key={index}>
               <div className="card-body">
@@ -39,9 +38,9 @@ class BreakfastM extends React.Component {
             </div>
             </div>
          )}
+        
       </div>
-      </div>
-      </div>
+     
     )
   }
 
