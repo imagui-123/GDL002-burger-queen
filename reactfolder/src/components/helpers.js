@@ -8,8 +8,8 @@ class FormMenu extends React.Component{
   render(){
     return(
 <div className="container-fluid">
-<div className="row">
-<div className="col-md-12">
+
+
 <div className="row">
 <div className="col-md-6">
 <div className="accordion" id="accordionExample">
@@ -52,10 +52,10 @@ class FormMenu extends React.Component{
     </div>
    </div>
 </div>
-</div>
-</div>
-</div>
+
  
+</div>
+
     );
   }
 }

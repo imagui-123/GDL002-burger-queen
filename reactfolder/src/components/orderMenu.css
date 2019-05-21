@@ -1,4 +1,4 @@
-.shoppingCart-container{
+/* .shoppingCart-container{
   width: 250px;
   height: 350px;
   margin: 20px;
@@ -20,4 +20,22 @@
   height: calc(100% - 40px);
   display: flex;
   flex-direction: column;
+} */
+ 
+.row{
+  width: 250px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column;
+  justify-content: space-between; */
+}
+.col-md-6{
+  float: right;
+  margin-left: 50%;
+} 
+.col{
+  float: right;
 }

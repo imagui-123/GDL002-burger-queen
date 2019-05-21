@@ -9,3 +9,4 @@ const kitchen = () => {
 };
 
 export default kitchen;
+
