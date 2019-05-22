@@ -1,17 +1,23 @@
 import React from "react";
-// import Breakfast from '../components/waiter';
-import Lunch from '../components/lunchMenu';
-import OrderMenu from '../components/orderMenu';
-import AddCart from '../components/addCart';
+import Product from "./Product";
+import {storeProducts} from '../data';
+import { ProductConsumer } from "../context";
+import {storeProductsL} from '../dataL.js'
+import { ProductConsumerL } from "../contextL";
 
 class FormMenu extends React.Component{
+  state={
+    products: storeProducts,
+    products: storeProductsL
+  };
+  
   render(){
+    console.log(storeProductsL);
     return(
+      
+      
 <div className="container-fluid">
 
-
-<div className="row">
-<div className="col-md-6">
 <div className="accordion" id="accordionExample">
   <div className="card1">
     <div className="card-header" id="headingOne">
@@ -20,15 +26,21 @@ class FormMenu extends React.Component{
           Breakfast
         </button>
       </h2>
-    </div>
+    </div> {/*header*/} 
 
     <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div className="card-body">
-            
-            <OrderMenu/>
+      <ProductConsumer>
+      {value =>{ 
+         return value.products.map(product=>{
+         return <Product key={product.id} product={product} />;
+       });
+     }}
+     </ProductConsumer>  
+          
       </div>
-    </div>
-  </div>
+    </div> {/*collapseOne*/} 
+  </div> {/*card 1*/} 
   <div className="card1">
     <div className="card-header" id="headingTwo">
       <h2 className="mb-0">
@@ -36,25 +48,22 @@ class FormMenu extends React.Component{
          Lunch
         </button>
       </h2>
-    </div>
+    </div> {/*header*/} 
     <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div className="card-body">
-          <Lunch/>
-          
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  <div className="row">
-   <div className="col-md-6">
-        <AddCart/>
-    </div>
-   </div>
-</div>
-
- 
-</div>
+      <ProductConsumerL>
+      {value =>{ 
+        return value.products.map(producto=>{
+        return <Product key={producto.id} product={producto} />;
+      });
+    }}
+    </ProductConsumerL>   
+      hola hola
+      </div> {/**/} 
+    </div> {/**/} 
+  </div>  {/*card1*/} 
+  </div> {/*acordion*/} 
+</div> //fluid
 
     );
   }

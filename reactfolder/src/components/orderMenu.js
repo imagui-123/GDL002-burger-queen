@@ -35,11 +35,11 @@ class OrderMenu extends React.Component{
        
         return(
            
-            <div className="row">
+            <div>
            
-             <div className="col-6">
+             
                 <MenuForm  addName={this.addName}/>
-             </div>
+             
                 <div>
                     <BreakfastM addOrders={this.addOrders}/>
                 </div>
