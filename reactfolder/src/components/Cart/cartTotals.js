@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+
 export default class CartTotals extends Component {
   render() {
     const {
@@ -8,7 +9,8 @@ export default class CartTotals extends Component {
       cartTax,
       cartTotal,
       cart,
-      clearCart
+      clearCart,
+
     } = this.props.value;
     const emptyCart = cart.length === 0 ? true : false;
     return (
@@ -25,7 +27,7 @@ export default class CartTotals extends Component {
                       clearCart();
                     }}
                   >
-                    clear cart
+                   <h5> clear cart</h5>
                   </button>
                 </Link>
                 <h5>
@@ -40,7 +42,12 @@ export default class CartTotals extends Component {
                   <span className="text-title"> total :</span>{" "}
                   <strong>$ {cartTotal} </strong>
                 </h5>
-               
+  
+                <Link to="/kitchen">
+                <button>
+                    send to kitchen
+                </button>
+                </Link>
               </div>
             </div>
           </div>

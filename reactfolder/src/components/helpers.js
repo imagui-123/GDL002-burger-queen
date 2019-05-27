@@ -51,13 +51,7 @@ class FormMenu extends React.Component{
     </div> {/*header*/} 
     <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div className="card-body">
-      <ProductConsumerL>
-      {value =>{ 
-        return value.products.map(producto=>{
-        return <Product key={producto.id} product={producto} />;
-      });
-    }}
-    </ProductConsumerL>   
+       
       hola hola
       </div> {/**/} 
     </div> {/**/} 

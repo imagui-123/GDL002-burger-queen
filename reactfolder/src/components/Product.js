@@ -1,28 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-import {ProductConsumer} from '../context'
+// import {Link} from 'react-router-dom';
+import {ProductConsumer} from '../context';
 
 export default class Product extends React.Component{
     render(){
         const {id, title, img, price, inCart} = this.props.product;
         return(
-            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my3">
-             <div className="card">
+            <ProductWrapper className="">
+             <div className="card" >
               <ProductConsumer>
                {(value)=>{
                  return (
-                    <div className="img-container p-5" onClick={()=> value.handleDetail(id)} >
-                    <Link to="/details">
-                      <img src={img} alt="product" className="card-img-top"/>
-                    </Link>
+                   
+                    <div className="img-container" onClick={()=> value.handleDetail(id)} > 
                     
+                    <img src={img} alt="product" className="card-img-top"/>
                     <button 
                       className="cart-btn" 
                       disabled={inCart ? true: false} 
                       onClick ={ ()=> {
                         value.addToCart(id);
-                        value.openModal(id);
+                                               
                 }} 
                 >
                 {inCart?(
@@ -37,20 +36,21 @@ export default class Product extends React.Component{
                  );
               }}
             </ProductConsumer>
-
+            
             {/* card footer */}
             <div className="card-footer d-flex justify-content-between">
             <p className="align-self-center mb-0">
                 {title}
             </p>
             <h5 className="text-blue font-italic mb-0">
-              <span className="mr-1">$</span>
+              <span className="">$</span>
               {price}
             </h5>
           </div>
         </div>
             
        </ProductWrapper>
+     
         );
     }
 }
@@ -62,7 +62,7 @@ const ProductWrapper = styled.div`
     transition: all 1s linear;
   }
   .card-footer {
-    background: transparent;
+    background: chocolate;
     border-top: transparent;
     transition: all 1s linear;
   }
@@ -72,7 +72,7 @@ const ProductWrapper = styled.div`
       box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
     }
     .card-footer {
-      background: rgba(247, 247, 247);
+      background: tan;
     }
   }
   .img-container {

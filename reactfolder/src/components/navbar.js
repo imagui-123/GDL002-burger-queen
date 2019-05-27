@@ -21,14 +21,7 @@ export default class NavBar extends Component {
           Kitchen
         </Link>
         </ul>
-          <Link to="/cart" className="ml-auto">
-            <ButtonContainer>
-            <span className="mr-2">
-            <i className="fas fa-cart-plus" />
-            </span>
-            Order
-          </ButtonContainer>
-      </Link>
+      
     </Nav>
   );
 }

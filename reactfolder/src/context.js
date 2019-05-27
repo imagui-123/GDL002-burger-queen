@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {storeProducts, detailProduct} from './data';
+import Waiter from './components/waiter';
 
 const ProductContext=React.createContext();
 
@@ -8,15 +9,18 @@ class ProductProvider extends Component{
         products:[],
         detailProduct: detailProduct,
         cart:[],
-        modalOpen:false,
         modalProduct: detailProduct,
         cartSubTotal: 0,
         cartTax: 0,
-        cartTotal: 0
+        cartTotal: 0,
+        waiterName: ""
     };
 
+      
     componentDidMount(){
         this.setProducts();
+        // this.submit= this.submit.bind(this);
+        // this.addWaiterName= this.addWaiterName(this);
     }
 
     setProducts= () =>{
@@ -32,7 +36,7 @@ class ProductProvider extends Component{
     };
 
     getItem = id => {
-        const product= this.state.products.find(item=> item.id===id)
+        const product= this.state.products.find(item=> item.id===id)     
         return product;
     };
 
@@ -56,24 +60,13 @@ class ProductProvider extends Component{
             return{
                 products: [...tempProducts], 
                     cart: [...this.state.cart, product]
-                  //  detailProduct: {...product}
+                    
+                    
+                  // es un objeto que contiene todos los arreglos
                 };
         },()=>{console.log(this.state)}); 
     };
        
-  openModal= id =>{
-      const product=this.getItem(id);
-      this.setState(()=>{
-          return {modalProduct:product, modalOpen:true}
-      });
-  };
-
-  closeModal= () =>{
-      this.setState(()=>{
-          return{modalOpen:false};
-      });
-  };
-
   increment = id => {
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find(item => {
@@ -83,6 +76,8 @@ class ProductProvider extends Component{
     const product = tempCart[index];
     product.count = product.count + 1;
     product.total = product.count * product.price;
+    console.log(product.count + "cuantos productos");
+    
     this.setState(() => {
       return {
         cart: [...tempCart]
@@ -130,14 +125,13 @@ class ProductProvider extends Component{
         };
       },
       () => {
-         console.log(this.state);
+         console.log(this.state + "addTotals");
       }
     );
   };
   removeItem = id => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
-
     const index = tempProducts.indexOf(this.getItem(id));
     let removedProduct = tempProducts[index];
     removedProduct.inCart = false;
@@ -166,6 +160,29 @@ class ProductProvider extends Component{
       }
     );
   };
+ 
+    addWaiterName(waiterName){
+      this.setState({
+        waiterName
+      });
+      console.log(waiterName);
+    } 
+
+    sendKitchen = id =>{
+      let tempProducts=[...this.state.products];
+      const index = tempProducts.indexOf(this.getItem(id));
+      const product= tempProducts[index];
+      product.inCart = true;
+      product.count=1;
+      this.setState(()=>{
+          return{
+              products: [...tempProducts], 
+                  cart: [...this.state.cart, product]
+                //  detailProduct: {...product}
+              };
+      },()=>{console.log(this.state.cart)}); 
+  };
+
     render(){
         return(
             <ProductContext.Provider value={{
@@ -177,9 +194,12 @@ class ProductProvider extends Component{
                 increment: this.increment,
                 decrement: this.decrement,
                 removeItem: this.removeItem,
-                clearCart: this.clearCart
+                clearCart: this.clearCart,
+                addWaiterName: this.addWaiterName,
+                sendKitchen: this.sendKitchen
             }}
             >
+            
               {this.props.children}
             </ProductContext.Provider>
         )

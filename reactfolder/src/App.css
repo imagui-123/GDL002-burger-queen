@@ -47,22 +47,50 @@
   transition: all 500ms ease-in-out;
 } */
 body{
-  background-image: url("img/Desktop.png");
-  /* background-repeat: round; */
+  background-image: url("./img/Desktop.png");
+  background-size: cover;
 }
 
 .card-img-top{
-  max-width: 200px;
+  max-width: 150px;
   margin: auto;
-  font-weight: 600;
+  font-weight: 200;  
   align-content: center;
   display: flex;
 }
 
+
 .card{
-  width: 16rem;
+  width: 12rem;
   align-content: space-between;
   margin: 10px;
+  
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+  padding: 10px;
+  /* background-color: #2a2a72; */
+  grid-auto-flow: column;
+}
+.grid-container > div {
+  background-color: rgba(245, 222, 179, 0.4);
+  text-align: center;
+  padding: 10px 15;
+  font-size: 10px;
+}
+/* .item1 {
+  grid-template-columns: auto auto;
+  grid-column: 3/6;
+}  */
+
+.item3 {
+  grid-column: 20 / 30 ;
+  width: 32rem;
 }
 
 :root {
@@ -78,11 +106,21 @@ body{
   --mainMaroon: #800000;
 }
 
-.text-title {
-  font-family: "Permanent Marker", cursive;
+p {
+  font-family: "Oswald", sans-serif;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+  font-size: 12px;
+  color: var(--mainDark);
 }
+
+h5{
+  color: var(--mainMaroon);
+  font-family: "PT Serif", serif;
+}
+
+{/*precio*/}
+
 .text-blue {
   color: var(--mainBlue);
 }

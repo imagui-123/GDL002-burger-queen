@@ -15,9 +15,9 @@ export default class Details extends Component{
                 <div className="container py-5">
                     {/* title */}
                     <div className="row">
-                        <div className="col-10 mx-auto col-md-6 my-3">
+                       {/* <div className="col-10 mx-auto col-md-6 my-3">
                             <img src={img} className="img-fluid" alt="" />
-                        </div>
+                        </div>*/}
                      {/* product info */}
                      <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                      <h1> {title}</h1>
@@ -27,21 +27,21 @@ export default class Details extends Component{
                          {price}
                        </strong>
                      </h4>
-                     <p className="text-capitalize font-weight-bold mt-3 mb-0">
+                     {/* <p className="text-capitalize font-weight-bold mt-3 mb-0">
                        some info about product :
                      </p>
-                     <p className="text-muted lead">{info}</p>
+            <p className="text-muted lead">{info}</p>*/}
                      {/* buttons */}
                      <div>
-                       <Link to="/">
+                       {/*<Link to="/">
                          <ButtonContainer>back to products</ButtonContainer>
-                       </Link>
+                       </Link>*/}
                        <ButtonContainer
                          cart
                          disabled={inCart ? true : false}
                          onClick={() => {
                            value.addToCart(id);
-                           value.openModal(id);
+                           {/* value.openModal(id); */}
                          }}
                        >
                          {inCart ? "in cart" : "add to cart"}

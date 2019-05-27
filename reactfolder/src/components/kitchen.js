@@ -1,12 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
+import CartKitchen from "../components/lunchMenu"
 
-const kitchen = () => {
-  return (
-    <div>
-      <p>kitchen</p>
-    </div>
-  );
-};
 
-export default kitchen;
+export default class Kitchen extends Component{
+  render(){
+    return(
+      <CartKitchen />
+    )
+  }
+}
+
+
 
