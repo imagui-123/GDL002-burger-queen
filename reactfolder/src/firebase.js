@@ -1,6 +1,6 @@
 import * as firebase from 'firebase';
 
-const firebaseConfig = {
+const config = {
     apiKey: "AIzaSyBMs4QpfM5gBX7UTyMnngK73mCkln4dZgg",
     authDomain: "burger-queen-52257.firebaseapp.com",
     databaseURL: "https://burger-queen-52257.firebaseio.com",
@@ -10,6 +10,7 @@ const firebaseConfig = {
     appId: "1:984058014268:web:895bee45d92f290a"
   };
   // Initialize Firebase
-  // firebase.initializeApp(firebaseConfig);
+   firebase.initializeApp(config);
 
-  export default firebaseConfig; 
+ 
+  export default firebase; 

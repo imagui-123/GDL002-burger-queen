@@ -6,12 +6,12 @@ import Navbar from "./components/navbar";
 import Default from "./components/Default";
 import Kitchen from "./components/kitchen";
 import ProductList from "./components/ProductList";
-import firebaseConfig from "./firebase";
-import Firebase from "firebase"
+import config from "./firebase";
+import firebase from "firebase"
 
 class App extends Component {
     render() {
-      Firebase.initializeApp(firebaseConfig);
+      //  firebase.initializeApp(config);
       return (
         <React.Fragment>
         <Navbar />

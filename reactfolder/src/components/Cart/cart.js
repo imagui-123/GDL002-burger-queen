@@ -26,7 +26,7 @@ export default class Store extends Component {
             }
           }}
         </ProductConsumer>
-        <Waiter addWaiterName={this.addWaiterName}/>
+       waiter: <Waiter />
       </section>
     );
   }
