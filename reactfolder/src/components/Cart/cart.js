@@ -4,7 +4,7 @@ import CartList from "./cartList";
 import CartTotals from "./cartTotals";
 import { ProductConsumer } from "../../context";
 import EmptyCart from "./emptyCart";
-import Waiter from "../waiter";
+// import Waiter from "../waiter";
 
 export default class Store extends Component {
   render() {
@@ -26,7 +26,7 @@ export default class Store extends Component {
             }
           }}
         </ProductConsumer>
-       waiter: <Waiter />
+      
       </section>
     );
   }

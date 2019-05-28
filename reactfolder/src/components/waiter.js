@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import firebase from "firebase";
 
 
+
 export default class Waiter extends Component{
     
     constructor() {
@@ -38,6 +39,7 @@ export default class Waiter extends Component{
       }
 
       componentDidMount() {
+        firebase.initializeApp(config);
         const itemsRef = firebase.database().ref('items');
         itemsRef.on('value', (snapshot) => {
           let items = snapshot.val();
