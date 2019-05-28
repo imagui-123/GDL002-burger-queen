@@ -6,8 +6,7 @@ import Navbar from "./components/navbar";
 import Default from "./components/Default";
 import Kitchen from "./components/kitchen";
 import ProductList from "./components/ProductList";
-import config from "./firebase";
-import firebase from "firebase"
+
 
 class App extends Component {
     render() {
